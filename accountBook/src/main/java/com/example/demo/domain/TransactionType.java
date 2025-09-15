@@ -1,4 +1,4 @@
-package com.example.accountBook.domain;
+package com.example.demo.domain;
 
 public enum TransactionType{
     INCOME,
