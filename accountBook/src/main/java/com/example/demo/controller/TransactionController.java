@@ -28,4 +28,11 @@ public class TransactionController {
         List<Transaction> transactions = transactionService.getAllTransactions();
         return ResponseEntity.ok(transactions);
     }
+
+    // TransactionController 클래스 내에 추가
+    @GetMapping("/category/{categoryId}")
+    public ResponseEntity<List<Transaction>> getTransactionsByCategory(@PathVariable Long categoryId) {
+        List<Transaction> transactions = transactionService.getTransactionsByCategory(categoryId);
+        return ResponseEntity.ok(transactions);
+    }
 }
